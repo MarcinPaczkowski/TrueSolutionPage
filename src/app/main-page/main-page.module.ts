@@ -10,10 +10,6 @@ import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
-// import { AboutComponent } from './about/about.component';
-// import { ExperienceComponent } from './experience/experience.component';
-// import { SkillsComponent } from './skills/skills.component';
-// import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +21,7 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     ExperienceComponent,
     SkillsComponent,
-    FooterComponent,
-    // AboutComponent,
-    // ExperienceComponent,
-    // SkillsComponent,
-    // FooterComponent
+    FooterComponent
 ],
   imports: [ mainPageRouting, SharedModule ],
   providers: [ ]
