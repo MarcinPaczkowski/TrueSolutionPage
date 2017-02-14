@@ -6,6 +6,10 @@ import { NavPanelComponent } from './nav-panel/nav-panel.component';
 import { NavItemComponent } from './nav-panel/nav-item/nav-item.component';
 import { IntroComponent } from './intro/intro.component';
 import { IntroSocialMediaComponent } from './intro/intro-social-media/intro-social-media.component';
+import { AboutComponent } from './about/about.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { SkillsComponent } from './skills/skills.component';
+import { FooterComponent } from './footer/footer.component';
 // import { AboutComponent } from './about/about.component';
 // import { ExperienceComponent } from './experience/experience.component';
 // import { SkillsComponent } from './skills/skills.component';
@@ -18,6 +22,10 @@ import { IntroSocialMediaComponent } from './intro/intro-social-media/intro-soci
     NavItemComponent,
     IntroComponent,
     IntroSocialMediaComponent,
+    AboutComponent,
+    ExperienceComponent,
+    SkillsComponent,
+    FooterComponent,
     // AboutComponent,
     // ExperienceComponent,
     // SkillsComponent,

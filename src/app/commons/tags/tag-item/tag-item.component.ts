@@ -3,8 +3,7 @@ import { TagInfo } from '../tags.models';
 
 @Component({
   selector: '[appTagItem]',
-  templateUrl: './tag-item.component.html',
-  styleUrls: ['./tag-item.component.scss']
+  templateUrl: './tag-item.component.html'
 })
 export class TagItemComponent implements OnInit {
   @Input() tag: TagInfo;

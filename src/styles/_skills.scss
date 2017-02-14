@@ -1,0 +1,20 @@
+.skills {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+
+    &-heading-spacer {
+        float: left;
+        width: 200px;
+        border-top: 3px solid #e7e7e7;
+    }
+
+    &-heading {
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+
+    img.margin-top {
+        margin-top: 140px;
+    }
+}

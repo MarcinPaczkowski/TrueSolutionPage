@@ -11,9 +11,12 @@ import { TagItemComponent } from './commons/tags/tag-item/tag-item.component';
     CommonModule, FormsModule, ReactiveFormsModule
   ],
   declarations: [
+    InfoBoxComponent, InfoBoxItemComponent,
+    TagsComponent, TagItemComponent
   ],
   exports: [
-    FormsModule, ReactiveFormsModule, CommonModule
+    FormsModule, ReactiveFormsModule, CommonModule,
+    InfoBoxComponent, TagsComponent
   ]
 })
 export class SharedModule { }
