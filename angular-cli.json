@@ -9,7 +9,8 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "images"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -18,7 +19,10 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss",
+        "../node_modules/font-awesome/scss/font-awesome.scss",
+        "../node_modules/hover.css/scss/hover.scss",
+        "styles/styles.scss"
       ],
       "scripts": [],
       "environments": {
@@ -49,7 +53,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "sass",
     "prefixInterfaces": false,
     "inline": {
       "style": false,

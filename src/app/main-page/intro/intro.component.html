@@ -1,0 +1,18 @@
+<div class="intro">
+  <img class="img-responsive position-absolute" src="../../../assets/images/pexels-photo-58420.jpeg" alt="background">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="intro-content">
+          <h1>{{ companyName }}</h1>
+          <h2>{{ ownerName }}</h2>
+          <h3>{{ positionMame }}</h3>
+          <hr class="intro-divider">
+          <ul class="list-inline">
+            <li appIntroSocialMedia *ngFor="let socialMediaButton of socialMediaButtons" [socialMediaButton]="socialMediaButton"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
