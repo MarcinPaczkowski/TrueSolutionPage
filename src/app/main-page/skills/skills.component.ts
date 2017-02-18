@@ -108,6 +108,7 @@ export class SkillsComponent implements OnInit {
     name: 'eXtreme Programming',
     buttonColor: 'btn-warning'
   }];
+
   constructor() { }
 
   ngOnInit() {

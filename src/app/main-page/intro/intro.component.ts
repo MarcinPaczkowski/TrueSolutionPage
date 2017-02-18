@@ -18,7 +18,7 @@ export class IntroComponent implements OnInit {
   {
     icon: 'fa-linkedin',
     name: 'Linkedin',
-    url: 'https://pl.linkedin.com/in/marcin-paczkowski-a4a029101'
+    url: 'https://www.linkedin.com/in/marcin-paczkowski/'
   },
   {
     icon: 'fa-github',

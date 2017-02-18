@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     height: 100vh;
+    min-height: 550px;
 
     &-content {
         position: relative;
@@ -28,11 +29,23 @@
             color: rgba(0, 0, 0, .5);
             text-shadow: 2px 2px 3px rgba(170, 170, 170, 1);
         }
+
+        @media all and (max-width: 437px) {
+            h1 {
+                font-size: 3em
+            }
+        }
     }
 
     &-divider {
         width: 400px;
         border-top: 1px solid #f8f8f8;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    @media all and (max-width: 437px) {
+        &-divider {
+        width: 80%;
+        }
     }
 }
