@@ -1,0 +1,19 @@
+.content {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+
+    &-heading-spacer {
+        float: left;
+        width: 200px;
+        border-top: 3px solid #e7e7e7;
+    }
+
+    &-heading {
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+
+    img.margin-top {
+        margin-top: 20px;
+    }
+}
