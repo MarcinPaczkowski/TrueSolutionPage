@@ -27,7 +27,7 @@ export class SkillsComponent implements OnInit {
     buttonColor: 'btn-success'
   },
   {
-    name: 'EntityFramework',
+    name: 'Entity Framework',
     buttonColor: 'btn-success'
   },
   {
@@ -64,7 +64,11 @@ export class SkillsComponent implements OnInit {
     buttonColor: 'btn-danger'
   },
   {
-    name: 'WebPack',
+    name: 'WebPack2',
+    buttonColor: 'btn-danger'
+  },
+  {
+    name: 'Angular-Cli',
     buttonColor: 'btn-danger'
   }];
 
@@ -90,6 +94,18 @@ export class SkillsComponent implements OnInit {
   },
   {
     name: 'macOS',
+    buttonColor: 'btn-warning'
+  },
+  {
+    name: 'Software Craftsmanship',
+    buttonColor: 'btn-warning'
+  },
+  {
+    name: 'Clean Code',
+    buttonColor: 'btn-warning'
+  },
+  {
+    name: 'eXtreme Programming',
     buttonColor: 'btn-warning'
   }];
   constructor() { }
