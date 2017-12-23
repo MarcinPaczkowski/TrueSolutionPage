@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nav-panel.component.html'
 })
 export class NavPanelComponent implements OnInit {
-  private items = ['O mnie', 'CV'];
+  items = ['O mnie', 'CV'];
 
   constructor() { }
 

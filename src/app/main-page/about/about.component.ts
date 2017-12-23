@@ -6,8 +6,8 @@ import { InfoBoxContent } from '../../commons/info-box/info-box.models';
   templateUrl: './about.component.html'
 })
 export class AboutComponent implements OnInit {
-  private currentAge: number;
-  private infoBoxContents: InfoBoxContent[] = [{
+  currentAge: number;
+  infoBoxContents: InfoBoxContent[] = [{
     title: 'Imię i nazwisko',
     content: 'Marcin Paczkowski',
   },

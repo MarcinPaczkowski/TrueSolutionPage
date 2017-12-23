@@ -6,7 +6,7 @@ import { TagInfo } from '../../commons/tags/tags.models';
   templateUrl: './skills.component.html'
 })
 export class SkillsComponent implements OnInit {
-  private backendTags: TagInfo[] = [{
+  backendTags: TagInfo[] = [{
     name: '.NET',
     buttonColor: 'btn-success'
   },
@@ -35,7 +35,7 @@ export class SkillsComponent implements OnInit {
     buttonColor: 'btn-success'
   }];
 
-  private frontendTags: TagInfo[] = [{
+  frontendTags: TagInfo[] = [{
     name: 'Angular2',
     buttonColor: 'btn-danger'
   },
@@ -72,7 +72,7 @@ export class SkillsComponent implements OnInit {
     buttonColor: 'btn-danger'
   }];
 
-  private toolsTags: TagInfo[] = [{
+  toolsTags: TagInfo[] = [{
     name: 'Visual Studio Community',
     buttonColor: 'btn-warning'
   },

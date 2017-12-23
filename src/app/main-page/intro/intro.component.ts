@@ -7,10 +7,10 @@ import { IntroSocialMediaButton } from './intro.models';
 })
 
 export class IntroComponent implements OnInit {
-  private companyName = 'True Solution';
-  private ownerName = 'Marcin Paczkowski';
-  private positionMame = 'Fullstack Developer';
-  private socialMediaButtons: IntroSocialMediaButton[] = [{
+  companyName = 'True Solution';
+  ownerName = 'Marcin Paczkowski';
+  positionMame = 'Fullstack Developer';
+  socialMediaButtons: IntroSocialMediaButton[] = [{
     icon: 'fa-user-circle',
     name: 'GoldenLine',
     url: 'http://www.goldenline.pl/marcin-paczkowski8/'
