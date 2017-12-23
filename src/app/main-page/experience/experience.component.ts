@@ -6,9 +6,14 @@ import { InfoBoxContent } from '../../commons/info-box/info-box.models';
   templateUrl: './experience.component.html'
 })
 export class ExperienceComponent implements OnInit {
-  infoBoxContents: InfoBoxContent[] = [{
-    title: 'True Solution (własna działalność)',
-    content: 'Fullstack Developer (04.2016 - teraz)',
+  infoBoxContents: InfoBoxContent[] = [
+  {
+    title: 'Predictes Sp. z.o.o.',
+    content: 'Fullstack Developer (03.2017 - teraz)',
+  },
+  {
+    title: 'inSync solutions Sp. z.o.o.',
+    content: 'Fullstack Developer (04.2016 - 03.2017)',
   },
   {
     title: 'Supremo Sp. z.o.o.',
