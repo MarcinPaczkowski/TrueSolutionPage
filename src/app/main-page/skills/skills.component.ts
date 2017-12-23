@@ -31,20 +31,20 @@ export class SkillsComponent implements OnInit {
     buttonColor: 'btn-success'
   },
   {
+    name: 'Entity Framework Core',
+    buttonColor: 'btn-success'
+  },
+  {
     name: 'SQL/T-SQL',
     buttonColor: 'btn-success'
   }];
 
   frontendTags: TagInfo[] = [{
-    name: 'Angular2',
+    name: 'Angular',
     buttonColor: 'btn-danger'
   },
   {
     name: 'JavaScript',
-    buttonColor: 'btn-danger'
-  },
-  {
-    name: 'ECMAScript6',
     buttonColor: 'btn-danger'
   },
   {
@@ -86,6 +86,10 @@ export class SkillsComponent implements OnInit {
   },
   {
     name: 'SCRUM',
+    buttonColor: 'btn-warning'
+  },
+  {
+    name: 'Jira',
     buttonColor: 'btn-warning'
   },
   {

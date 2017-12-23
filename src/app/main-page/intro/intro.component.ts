@@ -23,7 +23,7 @@ export class IntroComponent implements OnInit {
   {
     icon: 'fa-github',
     name: 'GitHub',
-    url: 'https://github.com/pakos1/'
+    url: 'https://github.com/MarcinPaczkowski/'
   }];
 
   constructor() {
