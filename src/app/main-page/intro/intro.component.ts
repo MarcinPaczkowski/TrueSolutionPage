@@ -24,6 +24,11 @@ export class IntroComponent implements OnInit {
     icon: 'fa-github',
     name: 'GitHub',
     url: 'https://github.com/MarcinPaczkowski/'
+  },
+  {
+    icon: 'fa-file-pdf-o',
+    name: 'CV',
+    url: '../../../assets/files/Marcin Paczkowski CV.pdf'
   }];
 
   constructor() {
