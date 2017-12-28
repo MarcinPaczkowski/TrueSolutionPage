@@ -2,10 +2,36 @@
     margin-bottom: 5px;
 }
 
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
 .margin-bottom-20 {
     margin-bottom: 20px;
 }
 
+.margin-left-50 {
+    margin-left: 50px;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
 .position-absolute {
     position: absolute;
+}
+
+.inline {
+    display: inline;
+}
+
+.no-margin {
+    @media screen and (max-width: 600px){
+        margin: 0;
+    }
 }

@@ -1,17 +1,17 @@
-<div class="experience-details">
+<div class="projects">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <hr class="content-heading-spacer">
         <div class="clearfix"></div>
         <div class="margin-bottom-20">
-          <h2 class="content-heading inline">Doświadczenie - szczegóły</h2>
+          <h2 class="content-heading inline">Wybrane zrealizowane projekty</h2>
           <button class="btn btn-primary margin-left-50 no-margin" (click)="goBack()">Powrót</button>
         </div>
       </div>
     </div>
   </div>
   <div class="container-fluid">
-    <app-experience-details-company *ngFor="let details of experienceCompaniesDetails; let i = index" [details]='details' [isEven]="i % 2 === 0"></app-experience-details-company>
+    <app-project *ngFor="let project of projects; let i = index" [project]='project' [isEven]="i % 2 === 0"></app-project>
   </div>
 </div>

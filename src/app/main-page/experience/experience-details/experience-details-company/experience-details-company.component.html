@@ -1,0 +1,15 @@
+<div class="experience-company-details row">
+  <div class="col-md-12 padding-bottom-10" [ngClass]="{'experience-company-details-even': isEven, 'experience-company-details-odd': !isEven }">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>{{ details.companyName }}</h3>
+          <p>{{ details.positon }} ({{ details.startOfWork }} - {{ details.endOfWork }})</p>
+          <ul class="experience-company-details-descriptions">
+            <li *ngFor="let description of details.experienceDescriptions">{{ description }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

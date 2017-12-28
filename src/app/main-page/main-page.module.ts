@@ -1,3 +1,4 @@
+import { ExperienceDetailsResolver } from './experience/experience-details/experience-details.resolver';
 import { NgModule } from '@angular/core';
 import { MainPageComponent } from './main-page.component';
 import { mainPageRouting } from './main-page.routing';
@@ -11,6 +12,12 @@ import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
 import { ExperienceDetailsComponent } from './experience/experience-details/experience-details.component';
+// tslint:disable-next-line:max-line-length
+import { ExperienceDetailsCompanyComponent } from './experience/experience-details/experience-details-company/experience-details-company.component';
+import { ProjectsComponent } from './experience/projects/projects.component';
+import { ProjectComponent } from './experience/projects/project/project.component';
+import { ExperienceService } from './experience/experience.service';
+import { ProjectResolver } from './experience/projects/project.resolver';
 
 @NgModule({
   declarations: [
@@ -23,10 +30,13 @@ import { ExperienceDetailsComponent } from './experience/experience-details/expe
     ExperienceComponent,
     SkillsComponent,
     FooterComponent,
-    ExperienceDetailsComponent
+    ExperienceDetailsComponent,
+    ExperienceDetailsCompanyComponent,
+    ProjectsComponent,
+    ProjectComponent
 ],
   imports: [ mainPageRouting, SharedModule ],
-  providers: [ ]
+  providers: [ ExperienceService, ProjectResolver, ExperienceDetailsResolver ]
 })
 
 export class MainPageModule { }
