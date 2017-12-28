@@ -55,7 +55,7 @@ export class ExperienceService {
         'wykorzystanie elementów metodyki programowania ekstremalnego']
     }, {
       companyName: 'Supremo Sp. z o.o.',
-      positon: 'NET Software Developer',
+      positon: 'Junior .NET Software Developer / .NET Software Developer',
       startOfWork: '07.2014',
       endOfWork: '04.2016',
       experienceDescriptions: [
