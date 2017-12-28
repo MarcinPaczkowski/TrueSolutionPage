@@ -6,7 +6,8 @@
         <div class="clearfix"></div>
         <h2 class="content-heading">Doświadczenie</h2>
         <app-info-box [infoBoxContents]="infoBoxContents"></app-info-box>
-        <button *ngIf='false' class="btn btn-primary btn-lg">Więcej</button>
+        <button class="btn btn-primary" (click)="goToExperience()">Szczegóły</button>
+        <button class="btn btn-success" (click)="goToRealizedProjects()">Zrealizowane projekty</button>
       </div>     
       <div class="col-md-5 col-sm-pull-6 col-sm-6">
         <img class="img-responsive hidden-xs margin-top" src="../../../assets/images/dog.png" alt="">

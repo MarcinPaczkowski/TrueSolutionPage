@@ -1,3 +1,39 @@
 .experience {
     background-color: #fff;
 }
+
+.experience-details {
+
+}
+
+.experience-company-details {
+    &-even {
+        background-color: #f8f8f8;
+        overflow: hidden;
+    }
+
+    &-odd {
+        background-color: #ffffff;
+        overflow: hidden;
+    }
+
+    &-descriptions {
+
+    }
+}
+
+.project {
+    &-even {
+        background-color: #f8f8f8;
+        overflow: hidden;
+    }
+
+    &-odd {
+        background-color: #ffffff;
+        overflow: hidden;
+    }
+
+    &-description {
+        font-size: 14px;        
+    }
+}

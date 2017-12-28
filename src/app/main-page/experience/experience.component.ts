@@ -1,35 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoBoxContent } from '../../commons/info-box/info-box.models';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ExperienceService } from './experience.service';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html'
 })
 export class ExperienceComponent implements OnInit {
-  infoBoxContents: InfoBoxContent[] = [
-  {
-    title: 'Predictes Sp. z.o.o.',
-    content: 'Fullstack Developer (03.2017 - teraz)',
-  },
-  {
-    title: 'inSync solutions Sp. z.o.o.',
-    content: 'Fullstack Developer (04.2016 - 03.2017)',
-  },
-  {
-    title: 'Supremo Sp. z.o.o.',
-    content: '.NET Developer (06.2015 - 04.2016)',
-  },
-  {
-    title: 'Supremo Sp. z.o.o.',
-    content: 'Junior .NET Developer (04.2014 - 06.2015)',
-  },
-  {
-    title: 'Cat Traffic Sp. z.o.o',
-    content: 'Stażysta (06.2013 - 06.2014)'
-  }];
-  constructor() { }
+  infoBoxContents: InfoBoxContent[] = [];
+  
+  constructor(private route: ActivatedRoute,
+    private router: Router,
+    private experienceService: ExperienceService) { }
 
   ngOnInit() {
+    this.infoBoxContents = this.experienceService.getBasicInfoAboutExperiences();
   }
 
+  goToExperience() {
+    this.router.navigate(['experience']);
+  }
+
+  goToRealizedProjects() {
+    this.router.navigate(['projects']);
+  }
 }
