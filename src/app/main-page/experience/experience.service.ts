@@ -42,7 +42,7 @@ export class ExperienceService {
       experienceDescriptions: [
         'udział w projektach 4-10 osobowych opartych o SCRUM',
         // tslint:disable-next-line:max-line-length
-        'wytwarzanie aplikacji webowych w tym: integracji z systemami zewnętrznymi oraz paneli do zarządzania aplikacjami w technologiach.NET/.NET Core oraz Angular',
+        'wytwarzanie aplikacji webowych w tym: integracji z systemami zewnętrznymi oraz paneli do zarządzania aplikacjami w technologiach .NET/.NET Core oraz Angular',
         'prowadzenie wewnętrznych szkoleń z języka C#']
     }, {
       companyName: 'inSync solutions Sp. z o.o.',
