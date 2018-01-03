@@ -6,11 +6,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page.component';
 import { ExperienceDetailsResolver } from './experience/experience-details/experience-details.resolver';
 import { ExperienceResolver } from './experience/experience.resolver';
+import { SkillsResolver } from './skills/skills.resolver';
 
 const routes: Routes = [
    { path: '', component: MainPageComponent, resolve: {
        aboutDetails: AboutResolver,
-       experienceDetails: ExperienceResolver
+       experienceDetails: ExperienceResolver,
+       skills: SkillsResolver
    }},
    { path: 'experience', component: ExperienceDetailsComponent, resolve: {
        experienceDetails: ExperienceDetailsResolver } },

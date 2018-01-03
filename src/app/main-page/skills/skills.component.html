@@ -4,14 +4,15 @@
       <div class="col-md-5 col-sm-6">
         <hr class="content-heading-spacer">
         <div class="clearfix"></div>
-        <h2 class="content-heading">Umiejętności</h2>
-        <h3>Backend</h3>
-        <app-tags [tags]="backendTags"></app-tags>
-        <h3>Frontend</h3>
-        <app-tags [tags]="frontendTags"></app-tags>
-        <h3>Narzędzia</h3>
-        <app-tags [tags]="toolsTags"></app-tags>        
-        <button *ngIf='false' class="btn btn-primary btn-lg">Więcej</button>
+        <h2 class="content-heading">{{ 'SKILLS_title' | translate }}</h2>
+        <h3>{{ 'SKILLS_backendTitle' | translate }}</h3>
+        <app-tags [tags]="skills?.backend"></app-tags>
+        <h3>{{ 'SKILLS_frontendTitle' | translate }}</h3>
+        <app-tags [tags]="skills?.frontend"></app-tags>
+        <h3>{{ 'SKILLS_patternsTitle' | translate }}</h3>
+        <app-tags [tags]="skills?.patterns"></app-tags>
+        <h3>{{ 'SKILLS_toolsTitle' | translate }}</h3>
+        <app-tags [tags]="skills?.tools"></app-tags>        
       </div>
       <div class="col-md-5 col-md-offset-2 col-sm-6">
         <img class="img-responsive hidden-xs margin-top" src="../../../assets/images/phones.png" alt="">

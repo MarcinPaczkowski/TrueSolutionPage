@@ -11,8 +11,14 @@ export class AppComponent implements OnInit {
   title = 'True solution';
 
   constructor(translate: TranslateService) {
+    translate.addLangs(['pl', 'en']);
+    translate.reloadLang('en');
+    translate.reloadLang('pl');
+
+
     translate.setDefaultLang('pl');
-    translate.use('pl');
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|pl/) ? browserLang : 'pl');
   }
 
   ngOnInit() {

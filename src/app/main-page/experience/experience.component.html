@@ -1,17 +1,17 @@
 <div class="content experience" data-aos="fade-right" data-aos-anchor-placement="top-center">
   <div class="container">
-    <div class="row">  
+    <div class="row">
       <div class="col-md-5 col-md-offset-1 col-sm-push-6 col-sm-6">
         <hr class="content-heading-spacer">
         <div class="clearfix"></div>
-        <h2 class="content-heading">Doświadczenie</h2>
+        <h2 class="content-heading">{{ 'EXPERIENCE_title' | translate }}</h2>
         <app-info-box [infoBoxContents]="details"></app-info-box>
-        <button class="btn btn-primary" (click)="goToExperience()">Szczegóły</button>
-        <button class="btn btn-success" (click)="goToRealizedProjects()">Zrealizowane projekty</button>
-      </div>     
+        <button class="btn btn-primary" (click)="goToExperience()">{{ 'EXPERIENCE_detailsTitle' | translate }}</button>
+        <button class="btn btn-success" (click)="goToRealizedProjects()">{{ 'EXPERIENCE_projectTitle' | translate }}</button>
+      </div>
       <div class="col-md-5 col-sm-pull-6 col-sm-6">
         <img class="img-responsive hidden-xs margin-top" src="../../../assets/images/dog.png" alt="">
-      </div>     
+      </div>
     </div>
   </div>
 </div>

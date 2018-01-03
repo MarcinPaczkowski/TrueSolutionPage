@@ -21,6 +21,8 @@ import { ProjectResolver } from './experience/projects/project.resolver';
 import { AboutService } from './about/about.service';
 import { AboutResolver } from './about/about.resolver';
 import { ExperienceResolver } from './experience/experience.resolver';
+import { SkillsService } from './skills/skills.service';
+import { SkillsResolver } from './skills/skills.resolver';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,7 @@ import { ExperienceResolver } from './experience/experience.resolver';
 ],
   imports: [ mainPageRouting, SharedModule ],
   providers: [ ExperienceService, ProjectResolver, ExperienceDetailsResolver, AboutService,
-    AboutResolver, ExperienceResolver ]
+    AboutResolver, ExperienceResolver, SkillsService, SkillsResolver ]
 })
 
 export class MainPageModule { }
