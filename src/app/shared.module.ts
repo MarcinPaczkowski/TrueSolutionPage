@@ -5,10 +5,12 @@ import { InfoBoxComponent } from './commons/info-box/info-box.component';
 import { InfoBoxItemComponent } from './commons/info-box/info-box-item/info-box-item.component';
 import { TagsComponent } from './commons/tags/tags.component';
 import { TagItemComponent } from './commons/tags/tag-item/tag-item.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
-    CommonModule, FormsModule, ReactiveFormsModule
+    CommonModule, FormsModule, ReactiveFormsModule,
+    TranslateModule.forChild(),
   ],
   declarations: [
     InfoBoxComponent, InfoBoxItemComponent,
@@ -16,7 +18,7 @@ import { TagItemComponent } from './commons/tags/tag-item/tag-item.component';
   ],
   exports: [
     FormsModule, ReactiveFormsModule, CommonModule,
-    InfoBoxComponent, TagsComponent
+    InfoBoxComponent, TagsComponent, TranslateModule
   ]
 })
 export class SharedModule { }

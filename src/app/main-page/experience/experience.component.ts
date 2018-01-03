@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { InfoBoxContent } from '../../commons/info-box/info-box.models';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ExperienceService } from './experience.service';
@@ -8,14 +8,12 @@ import { ExperienceService } from './experience.service';
   templateUrl: './experience.component.html'
 })
 export class ExperienceComponent implements OnInit {
-  infoBoxContents: InfoBoxContent[] = [];
+  @Input() details: InfoBoxContent[] = [];
   
   constructor(private route: ActivatedRoute,
-    private router: Router,
-    private experienceService: ExperienceService) { }
+    private router: Router) { }
 
   ngOnInit() {
-    this.infoBoxContents = this.experienceService.getBasicInfoAboutExperiences();
   }
 
   goToExperience() {
