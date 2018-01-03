@@ -18,6 +18,9 @@ import { ProjectsComponent } from './experience/projects/projects.component';
 import { ProjectComponent } from './experience/projects/project/project.component';
 import { ExperienceService } from './experience/experience.service';
 import { ProjectResolver } from './experience/projects/project.resolver';
+import { AboutService } from './about/about.service';
+import { AboutResolver } from './about/about.resolver';
+import { ExperienceResolver } from './experience/experience.resolver';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { ProjectResolver } from './experience/projects/project.resolver';
     ProjectComponent
 ],
   imports: [ mainPageRouting, SharedModule ],
-  providers: [ ExperienceService, ProjectResolver, ExperienceDetailsResolver ]
+  providers: [ ExperienceService, ProjectResolver, ExperienceDetailsResolver, AboutService,
+    AboutResolver, ExperienceResolver ]
 })
 
 export class MainPageModule { }
