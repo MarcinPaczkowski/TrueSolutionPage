@@ -1,3 +1,5 @@
+import { ExperienceService } from './experience/experience.service';
+import { AboutService } from './about/about.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -17,7 +19,9 @@ export class MainPageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
     private router: Router,
-    private translateService: TranslateService) { }
+    private translateService: TranslateService,
+    private aboutService: AboutService,
+    private experienceService: ExperienceService) { }
 
   ngOnInit() {
     this.languageToChange = this.translateService.currentLang === 'pl' ? 'EN' : 'PL';
@@ -37,7 +41,8 @@ export class MainPageComponent implements OnInit {
   changeLanguage() {
     this.isPolish = !this.isPolish;
     this.languageToChange = this.isPolish ? 'EN' : 'PL';
-    console.log(this.isPolish);
     this.translateService.use(this.isPolish ? 'pl' : 'en');
+    this.aboutDetails = this.aboutService.getDetails();
+    this.experienceDetails = this.experienceService.getBasicInfoAboutExperiences();
   }
 }

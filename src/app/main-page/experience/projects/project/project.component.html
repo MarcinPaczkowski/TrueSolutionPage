@@ -11,7 +11,7 @@
           <div class="row">
             <div class="col-md-6">
               <div *ngIf="project.technologies.length > 0" class="project-technologies">
-                <h4>Wykorzystane technologie</h4>
+                <h4>{{ 'PROJECTS_usedTechnologiesTitle' | translate}}</h4>
                 <app-tags [tags]="project.technologies"></app-tags>
               </div>
             </div>
