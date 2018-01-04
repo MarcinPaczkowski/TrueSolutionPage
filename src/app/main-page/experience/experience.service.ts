@@ -47,147 +47,225 @@ export class ExperienceService {
   }
 
   getDetailsAboutExperience() {
-    const experienceCompaniesDetails: ExperienceCompanyDetails[] = [{
-      companyName: 'Predictes Sp. z o.o.',
-      positon: 'Fullstack Developer',
-      startOfWork: '03.2017',
-      endOfWork: 'teraz',
-      experienceDescriptions: [
-        'udział w projektach 4-10 osobowych opartych o SCRUM',
-        // tslint:disable-next-line:max-line-length
-        'wytwarzanie aplikacji webowych w tym: integracji z systemami zewnętrznymi oraz paneli do zarządzania aplikacjami w technologiach .NET/.NET Core oraz Angular',
-        'prowadzenie wewnętrznych szkoleń z języka C#']
-    }, {
-      companyName: 'inSync solutions Sp. z o.o.',
-      positon: 'Fullstack Developer',
-      startOfWork: '04.2016',
-      endOfWork: '03.2017',
-      experienceDescriptions: [
-        'udział w projektach 3 osobowych opartych o SCRUM',
-        'wytwarzanie aplikacji webowych w technologiach .NET Core oraz Angular',
-        'wykorzystanie elementów metodyki programowania ekstremalnego']
-    }, {
-      companyName: 'Supremo Sp. z o.o.',
-      positon: 'Junior .NET Software Developer / .NET Software Developer',
-      startOfWork: '07.2014',
-      endOfWork: '04.2016',
-      experienceDescriptions: [
-        'udział w projektach 2-3 osobowych opartych o Waterfall',
-        'wytwarzanie rozszerzeń/modułów dla aplikacji klasy ERP (Comarch Altum oraz XL) oraz integracji z systemami zewnętrznymi',
-        'prowadzenie wewnętrznych szkoleń z języka C#']
-    }, {
-      companyName: 'Cat Traffic Sp. z o.o.',
-      positon: 'Stażysta',
-      startOfWork: '07.2013',
-      endOfWork: '01.2014',
-      experienceDescriptions: [
-        'wytwarzanie dedykowanych aplikacji biurkowych w technologii .NET',
-        'montaż systemów elektroniki drogowej']
-    }];
+    let experienceCompaniesDetails: ExperienceCompanyDetails[] = [];
+    Observable.combineLatest(
+      this.translateService.get('EXPERIENCEDETAILS_companyName1'),
+      this.translateService.get('EXPERIENCEDETAILS_position1'),
+      this.translateService.get('EXPERIENCEDETAILS_startOfWork1'),
+      this.translateService.get('EXPERIENCEDETAILS_endOfWork1'),
+      this.translateService.get('EXPERIENCEDETAILS_company1experience1'),
+      this.translateService.get('EXPERIENCEDETAILS_company1experience2'),
+      this.translateService.get('EXPERIENCEDETAILS_company1experience3'),
+
+      this.translateService.get('EXPERIENCEDETAILS_companyName2'),
+      this.translateService.get('EXPERIENCEDETAILS_position2'),
+      this.translateService.get('EXPERIENCEDETAILS_startOfWork2'),
+      this.translateService.get('EXPERIENCEDETAILS_endOfWork2'),
+      this.translateService.get('EXPERIENCEDETAILS_company2experience1'),
+      this.translateService.get('EXPERIENCEDETAILS_company2experience2'),
+      this.translateService.get('EXPERIENCEDETAILS_company2experience3'),
+
+      this.translateService.get('EXPERIENCEDETAILS_companyName3'),
+      this.translateService.get('EXPERIENCEDETAILS_position3'),
+      this.translateService.get('EXPERIENCEDETAILS_startOfWork3'),
+      this.translateService.get('EXPERIENCEDETAILS_endOfWork3'),
+      this.translateService.get('EXPERIENCEDETAILS_company3experience1'),
+      this.translateService.get('EXPERIENCEDETAILS_company3experience2'),
+      this.translateService.get('EXPERIENCEDETAILS_company3experience3'),
+
+      this.translateService.get('EXPERIENCEDETAILS_companyName4'),
+      this.translateService.get('EXPERIENCEDETAILS_position4'),
+      this.translateService.get('EXPERIENCEDETAILS_startOfWork4'),
+      this.translateService.get('EXPERIENCEDETAILS_endOfWork4'),
+      this.translateService.get('EXPERIENCEDETAILS_company4experience1'),
+      this.translateService.get('EXPERIENCEDETAILS_company4experience2')).subscribe(translations => {
+        experienceCompaniesDetails = [{
+          companyName: translations[0],
+          positon: translations[1],
+          startOfWork: translations[2],
+          endOfWork: translations[3],
+          experienceDescriptions: [translations[4], translations[5], translations[6]]
+        }, {
+          companyName: translations[7],
+          positon: translations[8],
+          startOfWork: translations[9],
+          endOfWork: translations[10],
+          experienceDescriptions: [translations[11], translations[12], translations[13]]
+        }, {
+          companyName: translations[14],
+          positon: translations[15],
+          startOfWork: translations[16],
+          endOfWork: translations[17],
+          experienceDescriptions: [translations[18], translations[19], translations[20]]
+        }, {
+          companyName: translations[21],
+          positon: translations[22],
+          startOfWork: translations[23],
+          endOfWork: translations[24],
+          experienceDescriptions: [translations[25], translations[26]]
+        }];
+      });
 
     return experienceCompaniesDetails;
   }
 
   getProject() {
-    const projects: Project[] = [{
-      description: 'Witryna wraz z panelem zarządzającym www.marktplatz.pl. Praca w zespole 4-osobowym.',
-      technologies: [{
-        name: 'ASP.NET Core MVC',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'Entity Framework Core',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'Angular',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'Bootstrap 4',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'Azure',
-        buttonColor: 'btn-success'
-      }]
-    }, {
-      // tslint:disable-next-line:max-line-length
-      description: 'Integracja platformy CMS z szyną danych TIBCO. W ramach tego projektu byłem odpowiedzialny za implementację gotowego rozwiązania oraz ciągły kontakt z programistami TIBCO w języku angielskim. Praca w zesole 10-osobowym.',
-      technologies: [{
-        name: '.NET',
-        buttonColor: 'btn-primary'
-      }, {
-        name: 'Kentico CMS',
-        buttonColor: 'btn-primary'
-      }]
-    }, {
-      // tslint:disable-next-line:max-line-length
-      description: 'Aplikacja klasy BPM do zarządzania procesami w firmie. W ramach tego projektu byłem odpowiedzialny za design oraz implementację funkcjonalności aplikacji. Praca w zespole 3-osobowym.',
-      technologies: [{
-        name: 'ASP.NET Core MVC',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'Entity Framework Core',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'Angular',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'Bootstrap 3',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'Azure',
-        buttonColor: 'btn-success'
-      }]
-    }, {
-      // tslint:disable-next-line:max-line-length
-      description: 'Aplikacja do rejestracji zleceń, składająca się z osobnego panelu dla klientów oraz administracji. Praca w zespole 3-osobowym.',
-      technologies: [{
-        name: 'ASP.NET Core MVC',
-        buttonColor: 'btn-primary'
-      }, {
-        name: 'Entity Framework Core',
-        buttonColor: 'btn-primary'
-      }, {
-        name: 'Angular',
-        buttonColor: 'btn-primary'
-      }, {
-        name: 'Bootstrap 3',
-        buttonColor: 'btn-primary'
-      }]
-    }, {
-      // tslint:disable-next-line:max-line-length
-      description: 'Aplikacja do nadzoru systemu parkingowego. W ramach tego projektu byłem odpowiedzialny za analizę biznesową, implementację gotowego rozwiązania oraz kontakt z klientem.',
-      technologies: [{
-        name: '.NET WinForms',
-        buttonColor: 'btn-success'
-      }, {
-        name: '.NET Console Application',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'Entity Framework',
-        buttonColor: 'btn-success'
-      }]
-    }, {
-      description: 'Aplikacja do rejestracji czasu pracy. Praca w zespole 3-osobowym.',
-      technologies: [{
-        name: '.NET WPF',
-        buttonColor: 'btn-primary'
-      }, {
-        name: 'Entity Framework',
-        buttonColor: 'btn-primary'
-      }]
-    }, {
-      // tslint:disable-next-line:max-line-length
-      description: 'Responsywny sklep internetowy www.sklep.beabeleza.pl. W ramach tego projektu byłem odpowiedzialny za cięcie layoutu strony oraz osadzenie projektu strony na platformie Comarch ERP e-sklep. Praca w zespole 2-osobowym.',
-      technologies: [{
-        name: 'HTML5',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'CSS',
-        buttonColor: 'btn-success'
-      }, {
-        name: 'Bootstrap 3',
-        buttonColor: 'btn-success'
-      }]
-    }];
+    let projects: Project[] = [];
+    Observable.combineLatest(
+      this.translateService.get('PROJECTS_project1description'),
+      this.translateService.get('SKILLS_backend9'),
+      this.translateService.get('SKILLS_backend7'),
+      this.translateService.get('SKILLS_frontend1'),
+      this.translateService.get('SKILLS_frontend10'),
+      this.translateService.get('SKILLS_backend10'),
+
+      this.translateService.get('PROJECTS_project2description'),
+      this.translateService.get('SKILLS_backend1'),
+      this.translateService.get('SKILLS_backend11'),
+
+      this.translateService.get('PROJECTS_project3description'),
+      this.translateService.get('SKILLS_backend9'),
+      this.translateService.get('SKILLS_backend7'),
+      this.translateService.get('SKILLS_frontend1'),
+      this.translateService.get('SKILLS_frontend9'),
+      this.translateService.get('SKILLS_backend10'),
+
+      this.translateService.get('PROJECTS_project4description'),
+      this.translateService.get('SKILLS_backend9'),
+      this.translateService.get('SKILLS_backend7'),
+      this.translateService.get('SKILLS_frontend1'),
+      this.translateService.get('SKILLS_frontend9'),
+
+      this.translateService.get('PROJECTS_project5description'),
+      this.translateService.get('SKILLS_backend12'),
+      this.translateService.get('SKILLS_backend13'),
+      this.translateService.get('SKILLS_backend6'),
+
+      this.translateService.get('PROJECTS_project6description'),
+      this.translateService.get('SKILLS_backend14'),
+      this.translateService.get('SKILLS_backend6'),
+
+      this.translateService.get('PROJECTS_project7description'),
+      this.translateService.get('SKILLS_frontend4'),
+      this.translateService.get('SKILLS_frontend11'),
+      this.translateService.get('SKILLS_frontend9')).subscribe(translations => {
+        projects = [{
+          description: translations[0],
+          technologies: [{
+            name: translations[1],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[2],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[3],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[4],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[5],
+            buttonColor: 'btn-success'
+          }]
+        },
+        {
+          description: translations[6],
+          technologies: [{
+            name: translations[7],
+            buttonColor: 'btn-primary'
+          },
+          {
+            name: translations[8],
+            buttonColor: 'btn-primary'
+          }]
+        },
+        {
+          description: translations[9],
+          technologies: [{
+            name: translations[10],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[11],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[12],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[13],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[14],
+            buttonColor: 'btn-success'
+          }]
+        },
+        {
+          description: translations[15],
+          technologies: [{
+            name: translations[16],
+            buttonColor: 'btn-primary'
+          },
+          {
+            name: translations[17],
+            buttonColor: 'btn-primary'
+          },
+          {
+            name: translations[18],
+            buttonColor: 'btn-primary'
+          },
+          {
+            name: translations[19],
+            buttonColor: 'btn-primary'
+          }]
+        },
+        {
+          description: translations[20],
+          technologies: [{
+            name: translations[21],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[22],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[23],
+            buttonColor: 'btn-success'
+          }]
+        },
+        {
+          description: translations[24],
+          technologies: [{
+            name: translations[25],
+            buttonColor: 'btn-primary'
+          }, {
+            name: translations[26],
+            buttonColor: 'btn-primary'
+          }]
+        },
+        {
+          description: translations[27],
+          technologies: [{
+            name: translations[28],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[29],
+            buttonColor: 'btn-success'
+          },
+          {
+            name: translations[30],
+            buttonColor: 'btn-success'
+          }]
+        }];
+      });
 
     return projects;
   }

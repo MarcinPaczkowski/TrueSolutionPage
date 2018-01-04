@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { IntroSocialMediaButton } from './intro.models';
 
 @Component({
@@ -7,6 +7,10 @@ import { IntroSocialMediaButton } from './intro.models';
 })
 
 export class IntroComponent implements OnInit {
+  @Input() isPolish = true;
+  @Input() languageToChange = 'PL';
+  @Output() languageChange = new EventEmitter();
+
   companyName = 'True Solution';
   ownerName = 'Marcin Paczkowski';
   positionMame = 'Fullstack Developer';
@@ -35,5 +39,9 @@ export class IntroComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  changeLanguage() {
+    this.languageChange.emit({});
   }
 }
