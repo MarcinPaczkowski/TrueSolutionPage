@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InfoBoxContent } from '../commons/info-box/info-box.models';
 import { Skills } from './skills/skills.models';
+import { IntroSocialMediaButton } from './intro/intro.models';
+import { IntroService } from './intro/intro.service';
 
 @Component({
   selector: 'app-main-page',
@@ -14,6 +16,7 @@ export class MainPageComponent implements OnInit {
   aboutDetails: InfoBoxContent[] = [];
   experienceDetails: InfoBoxContent[] = [];
   skills: Skills;
+  introDetails: IntroSocialMediaButton[];
   isPolish = true;
   languageToChange = 'EN';
 
@@ -21,7 +24,8 @@ export class MainPageComponent implements OnInit {
     private router: Router,
     private translateService: TranslateService,
     private aboutService: AboutService,
-    private experienceService: ExperienceService) { }
+    private experienceService: ExperienceService,
+    private introService: IntroService) { }
 
   ngOnInit() {
     this.languageToChange = this.translateService.currentLang === 'pl' ? 'EN' : 'PL';
@@ -30,11 +34,13 @@ export class MainPageComponent implements OnInit {
     this.route.data.subscribe((data: {
       aboutDetails: InfoBoxContent[],
       experienceDetails: InfoBoxContent[],
-      skills: Skills
+      skills: Skills,
+      intro: IntroSocialMediaButton[]
     }) => {
       this.aboutDetails = data.aboutDetails;
       this.experienceDetails = data.experienceDetails;
       this.skills = data.skills;
+      this.introDetails = data.intro;
     });
   }
 
@@ -44,5 +50,6 @@ export class MainPageComponent implements OnInit {
     this.translateService.use(this.isPolish ? 'pl' : 'en');
     this.aboutDetails = this.aboutService.getDetails();
     this.experienceDetails = this.experienceService.getBasicInfoAboutExperiences();
+    this.introDetails = this.introService.getDetails();
   }
 }
