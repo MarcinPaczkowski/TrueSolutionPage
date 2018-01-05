@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { Project } from '../experience.models';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,9 +10,11 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
 
   constructor(private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+    private elementRef: ElementRef) { }
 
   ngOnInit() {
+    this.elementRef.nativeElement.scrollIntoView();
     this.route.data.subscribe((data: { projects: Project[] }) => {
       this.projects = data.projects;
     });
@@ -21,5 +23,4 @@ export class ProjectsComponent implements OnInit {
   goBack() {
     this.router.navigate(['../']);
   }
-
 }
