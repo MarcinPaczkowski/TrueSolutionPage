@@ -7,12 +7,14 @@ import { MainPageComponent } from './main-page.component';
 import { ExperienceDetailsResolver } from './experience/experience-details/experience-details.resolver';
 import { ExperienceResolver } from './experience/experience.resolver';
 import { SkillsResolver } from './skills/skills.resolver';
+import { IntroResolver } from './intro/intro.resolver';
 
 const routes: Routes = [
    { path: '', component: MainPageComponent, resolve: {
        aboutDetails: AboutResolver,
        experienceDetails: ExperienceResolver,
-       skills: SkillsResolver
+       skills: SkillsResolver,
+       intro: IntroResolver
    }},
    { path: 'experience', component: ExperienceDetailsComponent, resolve: {
        experienceDetails: ExperienceDetailsResolver } },

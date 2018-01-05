@@ -9,8 +9,8 @@
           <h3>{{ positionMame }}</h3>
           <hr class="intro-divider">
           <ul class="list-inline">
-            <li class="margin-bottom-10" appIntroSocialMedia *ngFor="let socialMediaButton of socialMediaButtons" 
-            [socialMediaButton]="socialMediaButton"></li>
+            <li class="margin-bottom-10" appIntroSocialMedia *ngFor="let detail of details" 
+            [socialMediaButton]="detail"></li>
           </ul>
         </div>
       </div>
