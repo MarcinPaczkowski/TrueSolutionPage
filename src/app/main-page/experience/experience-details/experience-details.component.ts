@@ -9,19 +9,22 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ExperienceDetailsComponent implements OnInit {
   experienceCompaniesDetails: ExperienceCompanyDetails[] = [];
 
-  constructor(private route: ActivatedRoute,
+  constructor(
+    private route: ActivatedRoute,
     private router: Router,
-    private elementRef: ElementRef) { }
+    private elementRef: ElementRef
+  ) {}
 
   ngOnInit() {
     this.elementRef.nativeElement.scrollIntoView();
-    this.route.data.subscribe((data: { experienceDetails: ExperienceCompanyDetails[] }) => {
-      this.experienceCompaniesDetails = data.experienceDetails;
-    });
+    this.route.data.subscribe(
+      (data: { experienceDetails: ExperienceCompanyDetails[] }) => {
+        this.experienceCompaniesDetails = data.experienceDetails;
+      }
+    );
   }
-  
+
   goBack() {
     this.router.navigate(['../']);
   }
-
 }

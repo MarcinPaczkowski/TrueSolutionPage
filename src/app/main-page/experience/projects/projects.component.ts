@@ -9,9 +9,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
 
-  constructor(private route: ActivatedRoute,
+  constructor(
+    private route: ActivatedRoute,
     private router: Router,
-    private elementRef: ElementRef) { }
+    private elementRef: ElementRef
+  ) {}
 
   ngOnInit() {
     this.elementRef.nativeElement.scrollIntoView();

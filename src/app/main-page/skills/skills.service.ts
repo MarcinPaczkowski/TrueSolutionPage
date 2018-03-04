@@ -7,8 +7,7 @@ import { Skills } from './skills.models';
 
 @Injectable()
 export class SkillsService {
-
-  constructor(private translateService: TranslateService) { }
+  constructor(private translateService: TranslateService) {}
 
   getDetails() {
     const skills: Skills = {
@@ -31,40 +30,16 @@ export class SkillsService {
       this.translateService.get('SKILLS_backend5'),
       this.translateService.get('SKILLS_backend6'),
       this.translateService.get('SKILLS_backend7'),
-      this.translateService.get('SKILLS_backend8')).subscribe(translations => {
-        details = [{
-          name: translations[0],
+      this.translateService.get('SKILLS_backend8'),
+      this.translateService.get('SKILLS_backend15')
+    ).subscribe(translations => {
+      details = Array.from(Array(9).keys()).map((_, index) => {
+        return {
+          name: translations[index],
           buttonColor: 'btn-success'
-        },
-        {
-          name: translations[1],
-          buttonColor: 'btn-success'
-        },
-        {
-          name: translations[2],
-          buttonColor: 'btn-success'
-        },
-        {
-          name: translations[3],
-          buttonColor: 'btn-success'
-        },
-        {
-          name: translations[4],
-          buttonColor: 'btn-success'
-        },
-        {
-          name: translations[5],
-          buttonColor: 'btn-success'
-        },
-        {
-          name: translations[6],
-          buttonColor: 'btn-success'
-        },
-        {
-          name: translations[7],
-          buttonColor: 'btn-success'
-        }];
+        };
       });
+    });
     return details;
   }
 
@@ -78,44 +53,20 @@ export class SkillsService {
       this.translateService.get('SKILLS_frontend5'),
       this.translateService.get('SKILLS_frontend6'),
       this.translateService.get('SKILLS_frontend7'),
-      this.translateService.get('SKILLS_frontend8')).subscribe(translations => {
-        details = [{
-          name: translations[0],
+      this.translateService.get('SKILLS_frontend8'),
+      this.translateService.get('SKILLS_frontend12')
+    ).subscribe(translations => {
+      details = Array.from(Array(9).keys()).map((_, index) => {
+        return {
+          name: translations[index],
           buttonColor: 'btn-danger'
-        },
-        {
-          name: translations[1],
-          buttonColor: 'btn-danger'
-        },
-        {
-          name: translations[2],
-          buttonColor: 'btn-danger'
-        },
-        {
-          name: translations[3],
-          buttonColor: 'btn-danger'
-        },
-        {
-          name: translations[4],
-          buttonColor: 'btn-danger'
-        },
-        {
-          name: translations[5],
-          buttonColor: 'btn-danger'
-        },
-        {
-          name: translations[6],
-          buttonColor: 'btn-danger'
-        },
-        {
-          name: translations[7],
-          buttonColor: 'btn-danger'
-        }];
+        };
       });
+    });
     return details;
   }
 
-getPatternsDetails(): TagInfo[] {
+  getPatternsDetails(): TagInfo[] {
     let details: TagInfo[] = [];
     Observable.combineLatest(
       this.translateService.get('SKILLS_pattern1'),
@@ -125,40 +76,17 @@ getPatternsDetails(): TagInfo[] {
       this.translateService.get('SKILLS_pattern5'),
       this.translateService.get('SKILLS_pattern6'),
       this.translateService.get('SKILLS_pattern7'),
-      this.translateService.get('SKILLS_pattern8')).subscribe(translations => {
-        details = [{
-          name: translations[0],
+      this.translateService.get('SKILLS_pattern8'),
+      this.translateService.get('SKILLS_pattern9'),
+      this.translateService.get('SKILLS_pattern10')
+    ).subscribe(translations => {
+      details = Array.from(Array(10).keys()).map((_, index) => {
+        return {
+          name: translations[index],
           buttonColor: 'btn-warning'
-        },
-        {
-          name: translations[1],
-          buttonColor: 'btn-warning'
-        },
-        {
-          name: translations[2],
-          buttonColor: 'btn-warning'
-        },
-        {
-          name: translations[3],
-          buttonColor: 'btn-warning'
-        },
-        {
-          name: translations[4],
-          buttonColor: 'btn-warning'
-        },
-        {
-          name: translations[5],
-          buttonColor: 'btn-warning'
-        },
-        {
-          name: translations[6],
-          buttonColor: 'btn-warning'
-        },
-        {
-          name: translations[7],
-          buttonColor: 'btn-warning'
-        }];
+        };
       });
+    });
     return details;
   }
 
@@ -171,36 +99,16 @@ getPatternsDetails(): TagInfo[] {
       this.translateService.get('SKILLS_tool4'),
       this.translateService.get('SKILLS_tool5'),
       this.translateService.get('SKILLS_tool6'),
-      this.translateService.get('SKILLS_tool7')).subscribe(translations => {
-        details = [{
-          name: translations[0],
+      this.translateService.get('SKILLS_tool7'),
+      this.translateService.get('SKILLS_tool8')
+    ).subscribe(translations => {
+      details = Array.from(Array(8).keys()).map((_, index) => {
+        return {
+          name: translations[index],
           buttonColor: 'btn-primary'
-        },
-        {
-          name: translations[1],
-          buttonColor: 'btn-primary'
-        },
-        {
-          name: translations[2],
-          buttonColor: 'btn-primary'
-        },
-        {
-          name: translations[3],
-          buttonColor: 'btn-primary'
-        },
-        {
-          name: translations[4],
-          buttonColor: 'btn-primary'
-        },
-        {
-          name: translations[5],
-          buttonColor: 'btn-primary'
-        },
-        {
-          name: translations[6],
-          buttonColor: 'btn-primary'
-        }];
+        };
       });
+    });
     return details;
   }
 }

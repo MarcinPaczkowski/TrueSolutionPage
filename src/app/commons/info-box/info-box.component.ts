@@ -7,9 +7,7 @@ import { InfoBoxContent } from './info-box.models';
 })
 export class InfoBoxComponent implements OnInit {
   @Input() infoBoxContents: InfoBoxContent[];
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
